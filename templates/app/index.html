@@ -1,0 +1,18 @@
+{% extends "app/base.html" %}
+{% block Title %}
+    Вход
+{% endblock %}
+
+{% block Content %}
+    <div class="div-login-form">
+        <form method="post">
+            {% csrf_token %}
+            <div class="div-login-form-table">
+                <table>
+                    {{ LoginForm }}
+                </table>
+                <input type="submit" value="Вход">
+            </div>
+        </form>
+    </div>
+{% endblock %}
